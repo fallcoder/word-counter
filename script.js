@@ -2,22 +2,16 @@ function countWords() {
     // get the input text value
     let inputText = document.getElementById("inputField").value;
 
-    // initialize the word counter
-    let numWords = 0;
-
-    // loop throuht the input Text and count spaces in it
-    for(let i = 0; i < inputText.length; i++) {
-        let currentCharacter = inputText[i];
-
-        // check if the character is a space
-        if(currentCharacter == " ") {
-            numWords += 1;
-        }
+    // check if the input text is empty
+    if(inputText.trim() === "") {
+        document.getElementById("show").innerHTML = 0;
+        return;
     }
 
-    // add 1 to make the count equal to the number of words
-    // (count of words = count of spaces + 1)
-    numWords += 1;
+    // split the input text into words using whitespace as a delimiter
+    let wordsAaary = inputText.trim().split(/\s+/);
+
+    let numWords = wordsAaary.length;
 
     // display the result
     document.getElementById("show").innerHTML = numWords;
