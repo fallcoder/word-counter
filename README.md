@@ -5,6 +5,7 @@ Welcom to the Word Counter project ! This web application allows users to easily
 * **User-Friendly Interface:** the application features a simple and intuitive interface that allows users to input text into a designated area
 * **Real-Time Word Count:** as users type, they can click a button to see the total number of words counted in their input
 * **Display Output:** the word count is displayed prominently for easy visibility
+* **Reset Input Field:** adding new feature to reset input field, button `reset` 
 
 Author:
 * Developed by : Mouhamed Fall
