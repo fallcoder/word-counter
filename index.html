@@ -12,7 +12,10 @@
 
     <textarea id="inputField" rows="10" cols="60" placeholder="type your text here..."></textarea>
 
-    <button onclick="countWords()">count word</button>
+    <div class="buttons">
+        <button onclick="countWords()">count words</button>
+        <button class="btn-reset" onclick="resetField()">reset</button>
+    </div>
 
     <p>word count :
         <span id="show">0</span>
