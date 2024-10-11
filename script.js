@@ -16,3 +16,9 @@ function countWords() {
     // display the result
     document.getElementById("show").innerHTML = numWords;
 }
+
+// function to reset the input field
+function resetField() {
+    document.getElementById("inputField").value = "";
+    document.getElementById("show").innerHTML = 0;
+}
