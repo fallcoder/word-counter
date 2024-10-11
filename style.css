@@ -30,6 +30,26 @@ textarea {
     resize: none;
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-reset {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.btn-reset:hover {
+    background-color: darkred;
+}
+
+
 button {
     background-color: #28a745;
     color: #fff;
