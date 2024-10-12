@@ -35,6 +35,20 @@ textarea {
     gap: 10px;
 }
 
+.btn-count {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.btn-count:hover {
+    background-color: #21b641;
+}
+
 .btn-reset {
     background-color: red;
     color: #fff;
@@ -49,24 +63,22 @@ textarea {
     background-color: darkred;
 }
 
-
-button {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-
-button:hover {
-    background-color: #21b641;
-}
-
 #show {
     font-weight: bold;
     color: #007bff;
+}
+
+.stats-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 400px;
+}
+
+.stats-container p {
+    margin: 5px 0;
+    font-size: 16px;
 }
 
 @media (max-width: 600px) {
