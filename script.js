@@ -2,23 +2,54 @@ function countWords() {
     // get the input text value
     let inputText = document.getElementById("inputField").value;
 
+    // initialize variables
+    let numWords = 0;
+    let numSentences = 0;
+    let wordsArray = [];
+    let longestWord = "";
+    let shortestWord = "";
+
     // check if the input text is empty
     if(inputText.trim() === "") {
         document.getElementById("show").innerHTML = 0;
+        document.getElementById("stats").innerHTML = "";
         return;
     }
 
-    // split the input text into words using whitespace as a delimiter
-    let wordsAaary = inputText.trim().split(/\s+/);
+    // split the text into words using spaces
+    wordsArray = inputText.trim().split(/\s+/);
 
-    let numWords = wordsAaary.length;
+    // filter out non alphabetic words
+    wordsArray = wordsArray.filter(word => /^[a-zA-Z]+$/.test(word))
 
-    // display the result
+    // update the word count
+    numWords = wordsArray.length;
+
+    // count the number of valid sentences
+    // we considere a sentence valid if a ponctuation mark is precede by a least one  word charactere
+    numSentences = (inputText.match(/\w[.!?]/g) || []).length;
+
+    // find the longest and shortest words
+    for(let word of wordsArray) {
+        if(word.length > longestWord.length) {
+            longestWord = word;
+        }
+        if(shortestWord === "" || word.length < shortestWord.length) {
+            shortestWord = word;
+        }
+    }
+
+    // display the results
     document.getElementById("show").innerHTML = numWords;
+    document.getElementById("stats").innerHTML = `
+        <p>number of sentences: ${numSentences}</p>
+        <p>longest word: ${longestWord}</p>
+        <p>shortest word: ${shortestWord}</p>`;
 }
 
-// function to reset the input field
+// function to reset the input field and statistics
 function resetField() {
     document.getElementById("inputField").value = "";
     document.getElementById("show").innerHTML = 0;
+    document.getElementById("stats").innerHTML = "";
 }
