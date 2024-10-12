@@ -7,19 +7,20 @@
     <title>Word Counter</title>
 </head>
 <body>
-    <h1>Welcom !</h1>
-    <p>Type in the textbox and click on the button  to count the words</p>
+    <h1>Word Counter with Statistics</h1>
+    <p>Type some text below and click "count words" to see the statistics</p>
 
     <textarea id="inputField" rows="10" cols="60" placeholder="type your text here..."></textarea>
 
     <div class="buttons">
-        <button onclick="countWords()">count words</button>
-        <button class="btn-reset" onclick="resetField()">reset</button>
+        <button type="button" class="btn-count" onclick="countWords()">count words</button>
+        <button type="button" class="btn-reset" onclick="resetField()">reset</button>
     </div>
 
-    <p>word count :
-        <span id="show">0</span>
-    </p>
+    <div class="stats-container">
+        <p>word count: <span id="show">0</span></p>
+        <div id="stats"></div>
+    </div>
     
 </body>
     <script src="script.js"></script>
