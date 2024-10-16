@@ -1,7 +1,36 @@
+/* light theme */
+body.light-theme {
+    background-color: #e4e4e4;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+}
+
+h1 {  
+    margin: 0;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.theme-toggle {
+    font-size: 24px;
+    position: absolute;
+    cursor: pointer;
+    top: -30px;
+    right: 10px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,10 +38,6 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
-}
-
-h1 {
-    color: #333;
 }
 
 p {
@@ -74,11 +99,13 @@ textarea {
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     max-width: 400px;
+    border-radius: 5px;
 }
 
 .stats-container p {
     margin: 5px 0;
     font-size: 16px;
+    color: #000;
 }
 
 @media (max-width: 600px) {
