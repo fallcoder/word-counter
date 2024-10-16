@@ -16,7 +16,7 @@ function countWords() {
         return;
     }
 
-    // split the text into words, ignoring punctuation like commas and aposthrophes
+    // split the text into words using space, ignoring punctuation like commas and aposthrophes
     wordsArray = inputText.trim().split(/\s+|[,'.!?]+/).filter(Boolean);
 
     // filter out non alphabetic words
