@@ -16,8 +16,8 @@ function countWords() {
         return;
     }
 
-    // split the text into words using spaces
-    wordsArray = inputText.trim().split(/\s+/);
+    // split the text into words, ignoring punctuation like commas and aposthrophes
+    wordsArray = inputText.trim().split(/\s+|[,'.!?]+/).filter(Boolean);
 
     // filter out non alphabetic words
     wordsArray = wordsArray.filter(word => /^[a-zA-Z]+$/.test(word))
@@ -52,4 +52,19 @@ function resetField() {
     document.getElementById("inputField").value = "";
     document.getElementById("show").innerHTML = 0;
     document.getElementById("stats").innerHTML = "";
+}
+
+// theme
+function toggleTheme() {
+    // get body item
+    let bodyItem = document.body;
+
+    if(bodyItem.classList.contains("dark-theme")) {
+        bodyItem.classList.remove("dark-theme");
+        bodyItem.classList.add("light-theme");
+    }
+    else {
+        bodyItem.classList.remove("light-theme");
+        bodyItem.classList.add("dark-theme");
+    }
 }
