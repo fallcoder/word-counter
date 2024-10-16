@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Word Counter</title>
 </head>
-<body>
-    <h1>Word Counter with Statistics</h1>
+<body class="light-theme">
+    <div class="header">
+        <h1>Word Counter with Statistics</h1>
+        <i class="fas fa-moon theme-toggle" onclick="toggleTheme()"></i> 
+    </div>
+
     <p>Type some text below and click "count words" to see the statistics</p>
 
     <textarea id="inputField" rows="10" cols="60" placeholder="type your text here..."></textarea>
