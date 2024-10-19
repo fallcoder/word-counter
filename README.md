@@ -10,6 +10,7 @@ Word Counter is a simple web application that counts the number of words, senten
 * **Input Reset:** a reset button clears the input field and resets all statistics
 * **Robuste Input Handling:** handles cases  of empty input, multiple spaces and ensures that only valid words and sentences are counted
 * **Display Output:** the word count and all statistics are displayed prominently for easy visibility
+* **Theme Option** feature that allows the user to choose a color theme: `dark or light theme`
 
 ## Technologie Used
 * HTML
