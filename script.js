@@ -54,7 +54,7 @@ function resetField() {
     document.getElementById("stats").innerHTML = "";
 }
 
-// theme
+// update toggleTheme to save preference
 function toggleTheme() {
     // get body item
     let bodyItem = document.body;
@@ -62,9 +62,30 @@ function toggleTheme() {
     if(bodyItem.classList.contains("dark-theme")) {
         bodyItem.classList.remove("dark-theme");
         bodyItem.classList.add("light-theme");
+        saveThemePreference("light-theme")
     }
     else {
         bodyItem.classList.remove("light-theme");
         bodyItem.classList.add("dark-theme");
+        saveThemePreference("dark-theme")
     }
 }
+
+// function to save theme preference in localStorage
+function saveThemePreference(theme) {
+    localStorage.setItem("theme", theme)
+} 
+
+// function to restore the choosen theme
+function loadThemePreference() {
+    let saveTheme = localStorage.getItem("theme")
+    if(saveTheme) {
+        document.body.classList.add(saveTheme)
+    }
+    else {
+        document.body.classList.add("light-theme") // default theme
+    }
+}
+
+// load theme on page load
+window.onload = loadThemePreference;
