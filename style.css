@@ -88,6 +88,12 @@ textarea {
     background-color: darkred;
 }
 
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
 #show {
     font-weight: bold;
     color: #007bff;
@@ -100,6 +106,8 @@ textarea {
     background-color: #f9f9f9;
     max-width: 400px;
     border-radius: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .stats-container p {
@@ -109,12 +117,56 @@ textarea {
 }
 
 @media (max-width: 600px) {
-    textarea {
-        width: 100%;
+    body {
+        flex-direction: column;
+        padding: 10px;
+        font-size: 1rem;
     }
 
-    button {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .theme-toggle {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        font-size: 1rem;
+    }
+
+    .stats-container {
         width: 100%;
         padding: 15px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .stats-container p {
+        font-size: 1rem;
+        text-align: left;
     }
 }
