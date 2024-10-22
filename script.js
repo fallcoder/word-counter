@@ -11,6 +11,7 @@ function countWords() {
 
     // check if the input text is empty
     if(inputText.trim() === "") {
+        alert("Enter some text, please")
         document.getElementById("show").innerHTML = 0;
         document.getElementById("stats").innerHTML = "";
         return;
@@ -47,11 +48,24 @@ function countWords() {
         <p>shortest word: ${shortestWord}</p>`;
 }
 
+// disabled button if inputField is empty
+document.getElementById("inputField").addEventListener("input", function () {
+    const countButton = document.getElementById("btn-count");
+    if(this.value.trim() === "") {
+        countButton.disabled = true;
+    }
+    else {
+        countButton.disabled = false;
+    }
+})
+
+
 // function to reset the input field and statistics
 function resetField() {
     document.getElementById("inputField").value = "";
     document.getElementById("show").innerHTML = 0;
     document.getElementById("stats").innerHTML = "";
+    document.getElementById("btn-count").disabled = true;
 }
 
 // update toggleTheme to save preference
